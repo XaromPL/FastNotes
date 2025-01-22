@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FastNotes - Quickly create, manage, and edit your notes in a simple and efficient interface.">
+    <meta property="og:title" content="FastNotes">
+    <meta property="og:description" content="FastNotes - Quickly create, manage, and edit your notes in a simple and efficient interface.">
+    <meta name="twitter:title" content="FastNotes">
+    <meta name="twitter:description" content="FastNotes - Quickly create, manage, and edit your notes in a simple and efficient interface.">
+    <title>FastNotes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon"> 
+</head>
+<body>
+    <div class="container">
+        <h1>FastNotes</h1>
+        <input type="text" id="search-notes" placeholder="Search notes...">
+        <button id="sort-title-btn">Sort by Title</button>
+        <button id="sort-date-btn">Sort by Date</button>
+        <div id="notes-container"></div>
+    </div>
+
+    <button id="add-note-btn">+</button>
+
+    <div id="note-form" class="note-form">
+        <div id="editor-toolbar">
+            <button id="bold-btn">B</button>
+            <button id="italic-btn">I</button>
+            <button id="underline-btn">U</button>
+            <button id="strikethrough-btn">S</button>
+        </div>
+        <input type="text" id="note-title" placeholder="Note title" required>
+        <div class="note-content" contenteditable="true" placeholder="Write your note here..."></div>
+        <button id="save-note-btn">Save Note</button>
+        <button id="cancel-note-btn">Cancel</button>
+    </div>
+
+    <div id="note-overlay">
+        <div id="note-overlay-content">
+            <span id="close-overlay">&times;</span>
+            <h3 id="note-title-overlay"></h3>
+            <p id="note-content-overlay"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
